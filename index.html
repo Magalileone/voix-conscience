@@ -1,0 +1,1342 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voix Conscience - La Voix Vers Soi | Magali Leone</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Raleway:wght@300;400;500;600&family=Cinzel+Decorative:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --gold: #D4AF37;
+            --sage: #B8C5A0;
+            --beige: #F5EBE0;
+            --purple: #5C3A5C;
+            --brown: #8B6F47;
+            --white: #FFFFFF;
+            --light-gray: #F9F7F4;
+        }
+
+        body {
+            font-family: 'Raleway', sans-serif;
+            color: #333;
+            line-height: 1.7;
+            background: var(--white);
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            line-height: 1.3;
+        }
+
+        .quote {
+            font-family: 'Cinzel Decorative', serif;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            padding: 1.2rem 5%;
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.05);
+        }
+
+        .nav-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            color: var(--brown);
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+
+        .logo-tagline {
+            font-size: 0.75rem;
+            color: var(--purple);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-top: -5px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: var(--purple);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--gold);
+        }
+
+        /* Hero Section */
+        .hero {
+            margin-top: 80px;
+            padding: 6rem 5% 4rem;
+            background: linear-gradient(135deg, var(--beige) 0%, var(--light-gray) 100%);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(212, 175, 55, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            color: var(--purple);
+            margin-bottom: 1.5rem;
+            animation: fadeInUp 1s ease;
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            color: var(--brown);
+            margin-bottom: 2rem;
+            font-weight: 300;
+            animation: fadeInUp 1s ease 0.2s backwards;
+        }
+
+        .hero-tagline {
+            font-size: 1.1rem;
+            color: var(--purple);
+            margin-bottom: 3rem;
+            line-height: 1.8;
+            animation: fadeInUp 1s ease 0.4s backwards;
+        }
+
+        /* CTA Button */
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--gold) 0%, #C19A2E 100%);
+            color: white;
+            padding: 1.2rem 3rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 600;
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
+            transition: all 0.3s ease;
+            animation: fadeInUp 1s ease 0.6s backwards;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(212, 175, 55, 0.4);
+        }
+
+        .cta-micro {
+            font-size: 0.85rem;
+            color: var(--brown);
+            margin-top: 1rem;
+            animation: fadeInUp 1s ease 0.8s backwards;
+        }
+
+        /* Testimonial Quote */
+        .hero-testimonial {
+            margin-top: 4rem;
+            font-style: italic;
+            color: var(--purple);
+            font-size: 1.1rem;
+            animation: fadeInUp 1s ease 1s backwards;
+        }
+
+        /* Section Styles */
+        .section {
+            padding: 5rem 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: 2.8rem;
+            color: var(--purple);
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        /* Recognition Section */
+        .recognition {
+            background: white;
+        }
+
+        .recognition-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .recognition-card {
+            background: var(--light-gray);
+            padding: 2.5rem;
+            border-radius: 20px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .recognition-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+        }
+
+        .recognition-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .recognition-card h3 {
+            color: var(--purple);
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
+
+        .recognition-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* Check Section */
+        .check-section {
+            background: linear-gradient(135deg, var(--sage) 0%, #A8B591 100%);
+            color: white;
+            text-align: center;
+            padding: 4rem 5%;
+        }
+
+        .check-section h2 {
+            color: white;
+            margin-bottom: 2rem;
+        }
+
+        .check-cta {
+            background: white;
+            color: var(--purple);
+            margin-top: 2rem;
+        }
+
+        /* Vision Section */
+        .vision {
+            background: var(--beige);
+        }
+
+        .vision-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+
+        .vision-item {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .vision-item::before {
+            content: '✨';
+            display: block;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .vision-item h3 {
+            color: var(--purple);
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
+
+        /* About Program */
+        .about-program {
+            background: white;
+        }
+
+        .program-intro {
+            max-width: 800px;
+            margin: 0 auto 3rem;
+            text-align: center;
+            font-size: 1.15rem;
+            line-height: 1.9;
+            color: #555;
+        }
+
+        .for-you-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-top: 4rem;
+        }
+
+        .for-you-list, .not-for-you-list {
+            padding: 2.5rem;
+            border-radius: 20px;
+        }
+
+        .for-you-list {
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, rgba(184, 197, 160, 0.1) 100%);
+            border: 2px solid var(--gold);
+        }
+
+        .not-for-you-list {
+            background: var(--light-gray);
+            border: 2px solid #ddd;
+        }
+
+        .for-you-list h3, .not-for-you-list h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .for-you-list h3 {
+            color: var(--gold);
+        }
+
+        .not-for-you-list h3 {
+            color: #999;
+        }
+
+        .for-you-list ul, .not-for-you-list ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .for-you-list li, .not-for-you-list li {
+            padding: 1rem 0;
+            padding-left: 2rem;
+            position: relative;
+            line-height: 1.6;
+        }
+
+        .for-you-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--gold);
+            font-size: 1.3rem;
+            font-weight: bold;
+        }
+
+        .not-for-you-list li::before {
+            content: '✗';
+            position: absolute;
+            left: 0;
+            color: #999;
+            font-size: 1.3rem;
+        }
+
+        /* Modules Section */
+        .modules {
+            background: var(--light-gray);
+        }
+
+        .module {
+            background: white;
+            border-radius: 20px;
+            padding: 3rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 5px 30px rgba(0,0,0,0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .module:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+
+        .module-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+
+        .module-number {
+            background: linear-gradient(135deg, var(--gold) 0%, #C19A2E 100%);
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-right: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .module-title {
+            font-size: 1.8rem;
+            color: var(--purple);
+        }
+
+        .module-content ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .module-content li {
+            padding: 0.8rem 0;
+            padding-left: 2rem;
+            position: relative;
+            line-height: 1.7;
+        }
+
+        .module-content li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--sage);
+            font-weight: bold;
+        }
+
+        /* Bonus Section */
+        .bonus {
+            background: linear-gradient(135deg, var(--purple) 0%, #4A2F4A 100%);
+            color: white;
+        }
+
+        .bonus .section-title {
+            color: white;
+        }
+
+        .bonus-testimonial {
+            text-align: center;
+            font-style: italic;
+            font-size: 1.2rem;
+            margin-bottom: 3rem;
+            padding: 2rem;
+            background: rgba(255,255,255,0.1);
+            border-radius: 15px;
+        }
+
+        .bonus-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .bonus-item {
+            background: rgba(255,255,255,0.1);
+            padding: 2rem;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }
+
+        .bonus-item h3 {
+            color: var(--gold);
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
+
+        /* What You Get Section */
+        .what-you-get {
+            background: white;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .content-item {
+            display: flex;
+            align-items: flex-start;
+            padding: 1.5rem;
+            background: var(--light-gray);
+            border-radius: 15px;
+        }
+
+        .content-icon {
+            font-size: 2rem;
+            margin-right: 1rem;
+            flex-shrink: 0;
+        }
+
+        .content-text h4 {
+            color: var(--purple);
+            margin-bottom: 0.5rem;
+        }
+
+        /* Accompaniment Section */
+        .accompaniment {
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.15) 0%, rgba(184, 197, 160, 0.15) 100%);
+            padding: 3rem;
+            border-radius: 20px;
+            margin-top: 3rem;
+        }
+
+        .accompaniment h3 {
+            color: var(--purple);
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .accompaniment-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            background: var(--beige);
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .testimonial-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 5px 30px rgba(0,0,0,0.05);
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .testimonial-author {
+            color: var(--purple);
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .testimonial-role {
+            color: var(--brown);
+            font-size: 0.9rem;
+            margin-top: 0.3rem;
+        }
+
+        /* Transformations */
+        .transformations {
+            background: white;
+        }
+
+        .transformation-category {
+            margin-bottom: 3rem;
+        }
+
+        .transformation-category h3 {
+            color: var(--gold);
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .transformation-category ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .transformation-category li {
+            padding: 1rem 0;
+            padding-left: 2.5rem;
+            position: relative;
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+
+        .transformation-category li::before {
+            content: '✨';
+            position: absolute;
+            left: 0;
+            font-size: 1.3rem;
+        }
+
+        /* Pricing */
+        .pricing {
+            background: linear-gradient(135deg, var(--light-gray) 0%, var(--beige) 100%);
+            text-align: center;
+        }
+
+        .price-box {
+            background: white;
+            max-width: 700px;
+            margin: 3rem auto;
+            padding: 3rem;
+            border-radius: 25px;
+            box-shadow: 0 10px 50px rgba(0,0,0,0.1);
+        }
+
+        .value-list {
+            text-align: left;
+            margin: 2rem 0;
+        }
+
+        .value-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 1rem 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .value-item:last-child {
+            border-bottom: none;
+            font-weight: bold;
+            color: var(--purple);
+            font-size: 1.1rem;
+        }
+
+        .value-amount {
+            color: var(--gold);
+            font-weight: 600;
+        }
+
+        .price-highlight {
+            background: linear-gradient(135deg, var(--gold) 0%, #C19A2E 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+        }
+
+        .original-price {
+            text-decoration: line-through;
+            font-size: 1.3rem;
+            opacity: 0.7;
+        }
+
+        .current-price {
+            font-size: 3rem;
+            font-weight: bold;
+            margin: 1rem 0;
+        }
+
+        .payment-options {
+            font-size: 0.95rem;
+            margin-top: 1rem;
+        }
+
+        /* FAQ */
+        .faq {
+            background: white;
+        }
+
+        .faq-item {
+            background: var(--light-gray);
+            padding: 2rem;
+            border-radius: 15px;
+            margin-bottom: 1.5rem;
+        }
+
+        .faq-question {
+            color: var(--purple);
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .faq-answer {
+            color: #555;
+            line-height: 1.8;
+        }
+
+        /* Why Now */
+        .why-now {
+            background: linear-gradient(135deg, var(--purple) 0%, #4A2F4A 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .why-now .section-title {
+            color: white;
+        }
+
+        .why-now p {
+            font-size: 1.2rem;
+            line-height: 2;
+            margin: 1rem 0;
+        }
+
+        .why-now strong {
+            color: var(--gold);
+        }
+
+        /* Personal Message */
+        .personal-message {
+            background: var(--beige);
+            padding: 5rem 5%;
+        }
+
+        .message-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .message-content h2 {
+            color: var(--purple);
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .message-text {
+            font-size: 1.15rem;
+            line-height: 2;
+            color: #555;
+            margin-bottom: 2rem;
+        }
+
+        .signature {
+            font-family: 'Cinzel Decorative', serif;
+            font-size: 1.5rem;
+            color: var(--brown);
+            margin-top: 2rem;
+        }
+
+        /* Final CTA */
+        .final-cta {
+            background: linear-gradient(135deg, var(--gold) 0%, #C19A2E 100%);
+            padding: 5rem 5%;
+            text-align: center;
+            color: white;
+        }
+
+        .final-cta h2 {
+            font-size: 3rem;
+            margin-bottom: 2rem;
+            color: white;
+        }
+
+        .final-cta .cta-button {
+            background: white;
+            color: var(--purple);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--purple);
+            color: white;
+            text-align: center;
+            padding: 2rem 5%;
+        }
+
+        footer a {
+            color: var(--gold);
+            text-decoration: none;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            opacity: 0;
+            animation: fadeInUp 0.8s ease forwards;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .for-you-section {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .module-header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .module-number {
+                margin-bottom: 1rem;
+            }
+
+            .current-price {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-content">
+            <div>
+                <div class="logo">MAGALI LEONE</div>
+                <div class="logo-tagline">La Voix Vers Soi</div>
+            </div>
+            <div class="nav-links">
+                <a href="#contenus">Contenus</a>
+                <a href="#accompagnement">Accompagnement</a>
+                <a href="#tarif">Tarif</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Et si ta voix devenait enfin<br>la clé de ta liberté ?</h1>
+            <p class="hero-subtitle">Un parcours de 3 mois pour libérer ta voix,<br>retrouver ton axe intérieur et rayonner ta vérité authentique</p>
+            <p class="hero-tagline">À ton rythme, avec un accompagnement bienveillant</p>
+            <a href="https://calendly.com/contact-magalileone/appel-retour-a-soi" class="cta-button" target="_blank">Réserver mon appel découverte offert</a>
+            <p class="cta-micro">Accès immédiat • 100% à ton rythme • Séance individuelle incluse</p>
+            <div class="hero-testimonial">
+                <p>"C'est un chemin alchimique qui m'a permis d'aller au cœur du cœur de mon essence, à travers la Voix." — Valérie</p>
+                <p>"Je n'ai plus peur d'être qui je suis." — Catherine</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recognition Section -->
+    <section class="section recognition">
+        <h2 class="section-title">💔 Tu te reconnais ?</h2>
+        <div class="recognition-grid">
+            <div class="recognition-card">
+                <div class="recognition-icon">🌊</div>
+                <h3>Quelque chose veut s'exprimer</h3>
+                <p>Tu sens quelque chose de plus grand qui veut s'exprimer, mais ça bloque.</p>
+            </div>
+            <div class="recognition-card">
+                <div class="recognition-icon">🔄</div>
+                <h3>Tu tournes en rond</h3>
+                <p>Difficile de trouver ta voie et prendre ta place.</p>
+            </div>
+            <div class="recognition-card">
+                <div class="recognition-icon">🤐</div>
+                <h3>Ta voix est bridée</h3>
+                <p>Ta voix paraît timide ou bridée, loin de ce que tu portes en toi.</p>
+            </div>
+            <div class="recognition-card">
+                <div class="recognition-icon">🌸</div>
+                <h3>Tu veux du respect</h3>
+                <p>Tu veux une approche respectueuse et profonde, sans pression, à ton rythme.</p>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 3rem;">
+            <p style="font-size: 1.2rem; color: var(--purple); font-weight: 600;">👉 Si tu coches au moins 2 points, Voix Conscience est fait pour toi.</p>
+        </div>
+    </section>
+
+    <!-- Check Section CTA -->
+    <section class="check-section">
+        <h2>Prête à transformer ta vie par ta voix ?</h2>
+        <p style="font-size: 1.1rem; margin: 1.5rem 0;">Paiement sécurisé • 3× sans frais • Accès à vie</p>
+        <a href="https://calendly.com/contact-magalileone/appel-retour-a-soi" class="cta-button check-cta" target="_blank">Réserver mon appel découverte gratuit</a>
+    </section>
+
+    <!-- Vision Section -->
+    <section class="section vision">
+        <h2 class="section-title">✨ Imagine dans 8 à 12 semaines…</h2>
+        <div class="vision-grid">
+            <div class="vision-item">
+                <h3>Ancré.e & Aligné.e</h3>
+                <p>Tu te sens ancré·e, aligné·e, confiant·e dans qui tu es vraiment.</p>
+            </div>
+            <div class="vision-item">
+                <h3>Ta Vérité Sans Excuses</h3>
+                <p>Tu oses dire ta vérité, sans t'excuser.</p>
+            </div>
+            <div class="vision-item">
+                <h3>Voix Posée & Stable</h3>
+                <p>Ta voix est posée, stable, tu te sens à ta place.</p>
+            </div>
+            <div class="vision-item">
+                <h3>Émotions Apaisées</h3>
+                <p>Tu sais apaiser tes émotions par le chant énergétique.</p>
+            </div>
+            <div class="vision-item">
+                <h3>Intuition Claire</h3>
+                <p>Tu écoutes ton intuition, et tu rayonnes qui tu es, sans peur du jugement.</p>
+            </div>
+            <div class="vision-item">
+                <h3>Ta VOIX… Vers Toi</h3>
+                <p>Tu as enfin trouvé ta VOIX... vers toi !</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Program -->
+    <section class="section about-program">
+        <h2 class="section-title">🎭 Qu'est-ce que Voix Conscience ?</h2>
+        <div class="program-intro">
+            <p><strong>Voix Conscience est un parcours de transformation intérieure par la voix</strong>, conçu pour les âmes en quête de leur vérité profonde.</p>
+            <p>Pour explorer, libérer, intégrer.</p>
+            <p>Je t'accompagne avec une pédagogie claire (13 ans d'enseignement spécialisé) et une présence douce, structurée, respectueuse.</p>
+        </div>
+
+        <div class="for-you-section">
+            <div class="for-you-list">
+                <h3>✅ C'est pour toi si :</h3>
+                <ul>
+                    <li>Tu veux explorer le pouvoir transformateur de ta voix (sans formation longue)</li>
+                    <li>Tu veux libérer tes émotions et dépasser tes blocages</li>
+                    <li>Tu veux toucher ta dimension spirituelle par l'expérience, pas par la théorie</li>
+                    <li>Tu cherches un accompagnement doux mais profond pour te retrouver</li>
+                </ul>
+            </div>
+
+            <div class="not-for-you-list">
+                <h3>❌ Ce n'est PAS pour toi si :</h3>
+                <ul>
+                    <li>Tu cherches juste des cours de chant classiques</li>
+                    <li>Tu veux des résultats immédiats sans t'impliquer</li>
+                    <li>Tu n'es pas prêt·e à explorer tes émotions</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modules Section -->
+    <section class="section modules" id="contenus">
+        <h2 class="section-title">🚀 Le parcours — clair, progressif, transformateur</h2>
+        <p style="text-align: center; font-size: 1.2rem; color: var(--purple); font-weight: 600; margin-bottom: 3rem;">📹 PLUS DE 12H DE FORMATION VIDÉO + PDF</p>
+
+        <div class="module">
+            <div class="module-header">
+                <div class="module-number">1</div>
+                <h3 class="module-title">Fondements & Confiance Intérieure</h3>
+            </div>
+            <div class="module-content">
+                <ul>
+                    <li>Bases essentielles : tout est vibration (ondes cérébrales, fondements musicaux)</li>
+                    <li>Prendre contact avec ta voix et maîtriser ton souffle</li>
+                    <li>Techniques d'ancrage et placement de ta voix parlée</li>
+                    <li>Création de mantras personnalisés adaptés à ton être</li>
+                    <li>Identification des blocages de confiance et de leur origine (lien avec la voix)</li>
+                    <li>Méthodes d'hypnose interactive pour explorer tes ressources internes</li>
+                    <li>Connexion voix-sensations pour utiliser ton corps comme boussole</li>
+                    <li>Techniques de synesthésie pour accéder à tes richesses intérieures</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="module">
+            <div class="module-header">
+                <div class="module-number">2</div>
+                <h3 class="module-title">Libération Émotionnelle par la Voix</h3>
+            </div>
+            <div class="module-content">
+                <ul>
+                    <li>Expression émotionnelle par l'écriture intuitive et la mise en voix</li>
+                    <li>Méthodes de libération émotionnelle et corporelle avancées</li>
+                    <li>Harmonisation énergétique des centres du corps par la voix</li>
+                    <li>Techniques de chant énergétique pour transmuter et apaiser les émotions</li>
+                    <li>Explorer l'intention et la visualisation pour amplifier les résultats</li>
+                    <li>Lois universelles pour élever ta conscience et transformer ta réalité</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="module">
+            <div class="module-header">
+                <div class="module-number">3</div>
+                <h3 class="module-title">Intuition & Connexion Spirituelle</h3>
+            </div>
+            <div class="module-content">
+                <ul>
+                    <li>Techniques d'élévation vibratoire et de connexion spirituelle</li>
+                    <li>Lecture énergétique des lieux et maîtrise de la résonance par la voix</li>
+                    <li>Mouvement intuitif et mise en voix pour te connecter à plus grand que toi</li>
+                    <li>Développement de l'intuition par des outils de guidance personnalisés</li>
+                    <li>Apprentissage de la canalisation par la voix</li>
+                    <li>Intégration durable des expériences spirituelles dans ton quotidien</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bonus Section -->
+    <section class="section bonus">
+        <h2 class="section-title">🎁 Bonus techniques exceptionnels</h2>
+        <div class="bonus-testimonial">
+            <p>"Il y a tout sur la voix, plus besoin de cours de chant à vie !"</p>
+            <p>— Pernilla Aidt, Chanteuse professionnelle & Professeure de chant au Conservatoire (25 ans)</p>
+        </div>
+
+        <div class="bonus-grid">
+            <div class="bonus-item">
+                <h3>🏃‍♀️ Bonus 1</h3>
+                <p><strong>Exercices corporels et échauffements</strong> — Deviens un instrument vibrant de la tête aux pieds</p>
+            </div>
+            <div class="bonus-item">
+                <h3>🫁 Bonus 2</h3>
+                <p><strong>La respiration maîtrisée</strong> — Toutes les techniques de souffle pour libérer ta voix</p>
+            </div>
+            <div class="bonus-item">
+                <h3>😮 Bonus 3</h3>
+                <p><strong>Libération de la mâchoire</strong> — Débloque les tensions pour une expression fluide</p>
+            </div>
+            <div class="bonus-item">
+                <h3>🎵 Bonus 4</h3>
+                <p><strong>Exercices de maîtrise vocale</strong> — TOUTES les techniques professionnelles pour développer ta voix</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- What You Get -->
+    <section class="section what-you-get" id="accompagnement">
+        <h2 class="section-title">📚 Ce que tu reçois — accompagnement complet</h2>
+
+        <h3 style="color: var(--purple); font-size: 2rem; margin: 3rem 0 2rem; text-align: center;">📖 Contenus transformateurs</h3>
+        <div class="content-grid">
+            <div class="content-item">
+                <div class="content-icon">📹</div>
+                <div class="content-text">
+                    <h4>12h46 de formation vidéo</h4>
+                    <p>Formation complète + PDF pour réviser à ton rythme</p>
+                </div>
+            </div>
+            <div class="content-item">
+                <div class="content-icon">🧘‍♀️</div>
+                <div class="content-text">
+                    <h4>8 méditations guidées</h4>
+                    <p>Pour approfondir ton parcours</p>
+                </div>
+            </div>
+            <div class="content-item">
+                <div class="content-icon">💪</div>
+                <div class="content-text">
+                    <h4>82 exercices pratiques</h4>
+                    <p>Pour ancrer tes apprentissages</p>
+                </div>
+            </div>
+            <div class="content-item">
+                <div class="content-icon">✅</div>
+                <div class="content-text">
+                    <h4>Quiz d'auto-évaluation</h4>
+                    <p>Pour chaque chapitre</p>
+                </div>
+            </div>
+            <div class="content-item">
+                <div class="content-icon">♾️</div>
+                <div class="content-text">
+                    <h4>Accès à vie</h4>
+                    <p>À tout le contenu + mises à jour</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="accompaniment">
+            <h3>👤 Accompagnement personnalisé</h3>
+            <div class="accompaniment-grid">
+                <div class="content-item">
+                    <div class="content-icon">🎯</div>
+                    <div class="content-text">
+                        <h4>1 séance individuelle (1h30)</h4>
+                        <p>Pour poser ton socle de transformation et personnaliser ton parcours</p>
+                    </div>
+                </div>
+                <div class="content-item">
+                    <div class="content-icon">📱</div>
+                    <div class="content-text">
+                        <h4>Accompagnement WhatsApp 3 mois</h4>
+                        <p>Pose tes questions, partage tes avancées, enregistre tes pratiques. Je te réponds sous 24h avec des retours personnalisés.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div style="background: linear-gradient(135deg, rgba(212, 175, 55, 0.2) 0%, rgba(184, 197, 160, 0.2) 100%); padding: 2.5rem; border-radius: 20px; margin-top: 3rem; text-align: center;">
+            <h3 style="color: var(--purple); font-size: 1.8rem; margin-bottom: 1rem;">💎 Évolution possible</h3>
+            <p style="font-size: 1.15rem; line-height: 1.8;">⭐ Possibilité de déduire les 997€ intégralement si tu poursuis avec la formation complète — <strong>Voix Conscience devient ton investissement vers la certification</strong></p>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section testimonials">
+        <h2 class="section-title">💫 Ce que vivent mes accompagné·es</h2>
+        <div class="testimonial-grid">
+            <div class="testimonial-card">
+                <div class="testimonial-text">"Tu nous rends notre puissance."</div>
+                <div class="testimonial-author">🌟 Aliénor</div>
+                <div class="testimonial-role">Voix Conscience</div>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-text">"J'ai découvert des parties de moi que je n'aurais même pas imaginées !"</div>
+                <div class="testimonial-author">🌈 Gaston</div>
+                <div class="testimonial-role">Voix Conscience</div>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-text">"Tu as le pouvoir d'écouter et d'aider à découvrir notre beauté intérieure là où on croyait seulement avoir des fragilités. Je suis dans le développement personnel depuis plus de 10 ans et je n'ai jamais rencontré mes émotions autant qu'avec le chant de ta voix qui vibre exactement à la bonne fréquence pour libérer la peur et la douleur… gratitude"</div>
+                <div class="testimonial-author">💎 Rime Jebali</div>
+                <div class="testimonial-role">Voix Conscience</div>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-text">"C'est un chemin alchimique qui m'a permis d'aller au cœur du cœur de mon essence, à travers la Voix. Ça a posé quelque chose en moi."</div>
+                <div class="testimonial-author">🔥 Valérie</div>
+                <div class="testimonial-role">Formation complète</div>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-text">"Tu es une sage-femme pour moi. Tu nous fais accoucher de nous-mêmes. Je n'ai plus peur d'être qui je suis."</div>
+                <div class="testimonial-author">🌟 Catherine</div>
+                <div class="testimonial-role">Formation complète</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Transformations -->
+    <section class="section transformations">
+        <h2 class="section-title">🎯 Les transformations concrètes</h2>
+        <p style="text-align: center; font-size: 1.15rem; margin-bottom: 3rem; color: #666;">Voici ce que mes accompagné·es vivent grâce à Voix Conscience :</p>
+
+        <div class="transformation-category">
+            <h3>Transformation émotionnelle :</h3>
+            <ul>
+                <li>Libération des peurs, colères, tristesses anciennes</li>
+                <li>Confiance, légitimité, ancrage profond</li>
+                <li>Transformation de traumas (parfois transgénérationnels)</li>
+            </ul>
+        </div>
+
+        <div class="transformation-category">
+            <h3>Évolution relationnelle :</h3>
+            <ul>
+                <li>Parole vraie et relations apaisées</li>
+                <li>Capacité à poser tes limites avec bienveillance</li>
+                <li>Rayonnement naturel de ton authenticité</li>
+            </ul>
+        </div>
+
+        <div class="transformation-category">
+            <h3>Bien-être global :</h3>
+            <ul>
+                <li>Sérénité (système nerveux régulé)</li>
+                <li>Connexion spirituelle renforcée</li>
+                <li>Parfois amélioration/disparition de symptômes physiques*</li>
+            </ul>
+        </div>
+
+        <p style="font-style: italic; color: #999; margin-top: 2rem; text-align: center;">*Voix Conscience est un accompagnement transformatif, ne remplace pas un suivi médical.</p>
+    </section>
+
+    <!-- Pricing -->
+    <section class="section pricing" id="tarif">
+        <h2 class="section-title">💎 Valeur exceptionnelle</h2>
+
+        <div class="price-box">
+            <h3 style="color: var(--purple); font-size: 1.8rem; margin-bottom: 2rem;">Ce que tu reçois :</h3>
+            <div class="value-list">
+                <div class="value-item">
+                    <span>📹 12h46 de formation vidéo</span>
+                    <span class="value-amount">1000€</span>
+                </div>
+                <div class="value-item">
+                    <span>📝 Cours PDF complets</span>
+                    <span class="value-amount">200€</span>
+                </div>
+                <div class="value-item">
+                    <span>🧘‍♀️ 8 méditations guidées</span>
+                    <span class="value-amount">200€</span>
+                </div>
+                <div class="value-item">
+                    <span>💪 82 exercices pratiques</span>
+                    <span class="value-amount">450€</span>
+                </div>
+                <div class="value-item">
+                    <span>🎵 Bonus techniques complets</span>
+                    <span class="value-amount">800€</span>
+                </div>
+                <div class="value-item">
+                    <span>👤 1 séance individuelle</span>
+                    <span class="value-amount">150€</span>
+                </div>
+                <div class="value-item">
+                    <span>📱 Support WhatsApp 3 mois</span>
+                    <span class="value-amount">600€</span>
+                </div>
+                <div class="value-item">
+                    <span>VALEUR TOTALE</span>
+                    <span class="value-amount">3400€</span>
+                </div>
+            </div>
+
+            <div class="price-highlight">
+                <div class="original-price">3400€</div>
+                <div class="current-price">997€</div>
+                <div class="payment-options">Possibilité de paiement en 3 fois sans frais</div>
+            </div>
+
+            <a href="https://calendly.com/contact-magalileone/appel-retour-a-soi" class="cta-button" target="_blank">Réserver mon appel découverte gratuit</a>
+            <p class="cta-micro">Paiement sécurisé • 3× sans frais • Accès à vie • Séance incluse</p>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section faq">
+        <h2 class="section-title">❓ Questions fréquentes</h2>
+
+        <div class="faq-item">
+            <div class="faq-question">🕐 Combien de temps ai-je accès au contenu ?</div>
+            <div class="faq-answer">À vie ! Une fois inscrit·e, tu pourras faire et/ou refaire tous les modules sans limite.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">📱 Comment fonctionne l'accompagnement WhatsApp ?</div>
+            <div class="faq-answer">Tu peux poser tes questions, partager tes ressentis, enregistrer tes pratiques. Je te réponds personnellement sous 24h avec des retours détaillés (jours ouvrés).</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">🎤 Dois-je savoir chanter pour commencer ?</div>
+            <div class="faq-answer">Absolument pas ! C'est un parcours de découverte, pas de performance.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">⏰ Combien de temps par semaine dois-je y consacrer ?</div>
+            <div class="faq-answer">À ton rythme ! Certain·es y consacrent 30min/semaine, d'autres 2h. L'important est la régularité, pas l'intensité.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">💰 Puis-je vraiment déduire les 997€ de la formation complète ?</div>
+            <div class="faq-answer">Oui, intégralement ! Voix Conscience devient alors ton investissement vers la certification.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">🎯 Et si ça ne me convient pas ?</div>
+            <div class="faq-answer">Nous échangeons ensemble pour comprendre et ajuster. Mon objectif est ta transformation réussie, dans le respect de ton rythme.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">➕ Et si j'ai peur de ne pas réussir ?</div>
+            <div class="faq-answer">C'est naturel d'avoir peur devant la transformation… tu avances à ton rythme, je suis présente pour toi, où que tu sois.</div>
+        </div>
+    </section>
+
+    <!-- Why Now -->
+    <section class="section why-now">
+        <h2 class="section-title">🔥 Pourquoi maintenant ?</h2>
+        <div style="max-width: 800px; margin: 0 auto;">
+            <p><strong>Ta voix t'attend depuis toujours.</strong></p>
+            <p>Chaque jour où tu ne l'explores pas, c'est une partie de toi qui reste silencieuse.</p>
+            <p>Chaque émotion non libérée, c'est une tension qui s'accumule.</p>
+            <p>Chaque connexion spirituelle ratée, c'est un appel intérieur non entendu.</p>
+            <p style="font-size: 1.4rem; margin-top: 2rem;"><strong>Il n'y a pas de "bon moment" pour se retrouver.<br>Il y a juste... maintenant.</strong></p>
+        </div>
+    </section>
+
+    <!-- Personal Message -->
+    <section class="personal-message">
+        <div class="message-content">
+            <h2>💖 Un mot personnel</h2>
+            <div class="message-text">
+                <p><strong>Chère âme en quête,</strong></p>
+                <p>Je sais ce que c'est de chercher sa voie, de se sentir perdue, de ne pas oser exprimer qui on est vraiment.</p>
+                <p>J'ai mis plus de 30 ans à comprendre que ma voix était ma clé de liberté.</p>
+                <p>Voix Conscience, c'est le chemin que j'aurais aimé avoir à l'époque où je me débattais avec mes questionnements.</p>
+                <p>C'est un espace doux, profond, respectueux, où tu peux enfin accoucher de qui tu es vraiment.</p>
+                <p><strong>Ta transformation t'attend. Ta voix t'appelle.</strong></p>
+            </div>
+            <p class="signature">Avec tout mon amour,<br>💫 Magali</p>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta">
+        <h2>🚀 Prête à découvrir ta voix intérieure ?</h2>
+        <p style="font-size: 1.3rem; margin-bottom: 2rem;">Ta voix vers toi commence maintenant.</p>
+        <a href="https://calendly.com/contact-magalileone/appel-retour-a-soi" class="cta-button" target="_blank">Réserver mon appel découverte offert</a>
+        <p class="cta-micro">Accès immédiat • 100% à ton rythme • Séance incluse</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>Des questions ? Écris-moi à <a href="mailto:contact.magalileone@gmail.com">contact.magalileone@gmail.com</a></p>
+        <p style="margin-top: 1rem;">Je te réponds personnellement 💌</p>
+        <p style="margin-top: 2rem; font-size: 0.9rem; opacity: 0.8;">© 2025 Magali Leone - La Voix Vers Soi</p>
+    </footer>
+
+    <script>
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Fade in animations on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.recognition-card, .vision-item, .module, .bonus-item, .testimonial-card, .faq-item').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
