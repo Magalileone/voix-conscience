@@ -236,11 +236,6 @@
             box-shadow: 0 15px 40px rgba(0,0,0,0.08);
         }
 
-        .recognition-icon {
-            font-size: 3rem;
-            margin-bottom: 1.5rem;
-        }
-
         .recognition-card h3 {
             color: var(--purple);
             font-size: 1.3rem;
@@ -286,13 +281,9 @@
         .vision-item {
             text-align: center;
             padding: 2rem;
-        }
-
-        .vision-item::before {
-            content: '✨';
-            display: block;
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
         }
 
         .vision-item h3 {
@@ -329,9 +320,7 @@
         }
 
         .program-intro {
-            max-width: 800px;
-            margin: 0 auto 3rem;
-            text-align: center;
+            text-align: left;
             font-size: 1.15rem;
             line-height: 1.9;
             color: #555;
@@ -527,9 +516,17 @@
         }
 
         .content-icon {
-            font-size: 2rem;
+            width: 40px;
+            height: 40px;
+            background: var(--gold);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             margin-right: 1rem;
             flex-shrink: 0;
+            font-weight: bold;
         }
 
         .content-text h4 {
@@ -624,10 +621,11 @@
         }
 
         .transformation-category li::before {
-            content: '✨';
+            content: '•';
             position: absolute;
             left: 0;
-            font-size: 1.3rem;
+            font-size: 1.8rem;
+            color: var(--gold);
         }
 
         /* Pricing */
@@ -943,31 +941,27 @@
 
     <!-- Recognition Section -->
     <section class="section recognition">
-        <h2 class="section-title">💔 Tu te reconnais ?</h2>
+        <h2 class="section-title">Tu te reconnais ?</h2>
         <div class="recognition-grid">
             <div class="recognition-card">
-                <div class="recognition-icon">🌊</div>
                 <h3>Quelque chose veut s'exprimer</h3>
                 <p>Tu sens quelque chose de plus grand qui veut s'exprimer, mais ça bloque.</p>
             </div>
             <div class="recognition-card">
-                <div class="recognition-icon">🔄</div>
                 <h3>Tu tournes en rond</h3>
                 <p>Difficile de trouver ta voie et prendre ta place.</p>
             </div>
             <div class="recognition-card">
-                <div class="recognition-icon">🤐</div>
                 <h3>Ta voix est bridée</h3>
                 <p>Ta voix paraît timide ou bridée, loin de ce que tu portes en toi.</p>
             </div>
             <div class="recognition-card">
-                <div class="recognition-icon">🌸</div>
                 <h3>Tu veux du respect</h3>
                 <p>Tu veux une approche respectueuse et profonde, sans pression, à ton rythme.</p>
             </div>
         </div>
         <div style="text-align: center; margin-top: 3rem;">
-            <p style="font-size: 1.2rem; color: var(--purple); font-weight: 600;">👉 Si tu coches au moins 2 points, Voix Conscience est fait pour toi.</p>
+            <p style="font-size: 1.2rem; color: var(--purple); font-weight: 600;">Si tu coches au moins 2 points, Voix Conscience est fait pour toi.</p>
         </div>
     </section>
 
@@ -980,7 +974,7 @@
 
     <!-- Vision Section -->
     <section class="section vision">
-        <h2 class="section-title">✨ Imagine dans 8 à 12 semaines…</h2>
+        <h2 class="section-title">Imagine dans 8 à 12 semaines…</h2>
         <div class="vision-grid">
             <div class="vision-item">
                 <h3>Ancré.e & Aligné.e</h3>
@@ -1011,7 +1005,7 @@
 
     <!-- About Program -->
     <section class="section about-program">
-        <h2 class="section-title">🎭 Qu'est-ce que Voix Conscience ?</h2>
+        <h2 class="section-title">Qu'est-ce que Voix Conscience ?</h2>
         <div class="about-program-header">
             <div class="about-program-image">
                 <img src="photo2.jpg" alt="Accompagnement Voix Conscience avec Magali">
@@ -1027,7 +1021,7 @@
 
         <div class="for-you-section">
             <div class="for-you-list">
-                <h3>✅ C'est pour toi si :</h3>
+                <h3>C'est pour toi si :</h3>
                 <ul>
                     <li>Tu veux explorer le pouvoir transformateur de ta voix (sans formation longue)</li>
                     <li>Tu veux libérer tes émotions et dépasser tes blocages</li>
@@ -1037,7 +1031,7 @@
             </div>
 
             <div class="not-for-you-list">
-                <h3>❌ Ce n'est PAS pour toi si :</h3>
+                <h3>Ce n'est PAS pour toi si :</h3>
                 <ul>
                     <li>Tu cherches juste des cours de chant classiques</li>
                     <li>Tu veux des résultats immédiats sans t'impliquer</li>
@@ -1049,8 +1043,8 @@
 
     <!-- Modules Section -->
     <section class="section modules" id="contenus">
-        <h2 class="section-title">🚀 Le parcours — clair, progressif, transformateur</h2>
-        <p style="text-align: center; font-size: 1.2rem; color: var(--purple); font-weight: 600; margin-bottom: 3rem;">📹 PLUS DE 12H DE FORMATION VIDÉO + PDF</p>
+        <h2 class="section-title">Le parcours — clair, progressif, transformateur</h2>
+        <p style="text-align: center; font-size: 1.2rem; color: var(--purple); font-weight: 600; margin-bottom: 3rem;">Plus de 12h de formation vidéo + PDF</p>
 
         <div class="module">
             <div class="module-header">
@@ -1108,7 +1102,7 @@
 
     <!-- Bonus Section -->
     <section class="section bonus">
-        <h2 class="section-title">🎁 Bonus techniques exceptionnels</h2>
+        <h2 class="section-title">Bonus techniques exceptionnels</h2>
         <div class="bonus-testimonial">
             <p>"Il y a tout sur la voix, plus besoin de cours de chant à vie !"</p>
             <p>— Pernilla Aidt, Chanteuse professionnelle & Professeure de chant au Conservatoire (25 ans)</p>
@@ -1116,19 +1110,19 @@
 
         <div class="bonus-grid">
             <div class="bonus-item">
-                <h3>🏃‍♀️ Bonus 1</h3>
+                <h3>Bonus 1</h3>
                 <p><strong>Exercices corporels et échauffements</strong> — Deviens un instrument vibrant de la tête aux pieds</p>
             </div>
             <div class="bonus-item">
-                <h3>🫁 Bonus 2</h3>
+                <h3>Bonus 2</h3>
                 <p><strong>La respiration maîtrisée</strong> — Toutes les techniques de souffle pour libérer ta voix</p>
             </div>
             <div class="bonus-item">
-                <h3>😮 Bonus 3</h3>
+                <h3>Bonus 3</h3>
                 <p><strong>Libération de la mâchoire</strong> — Débloque les tensions pour une expression fluide</p>
             </div>
             <div class="bonus-item">
-                <h3>🎵 Bonus 4</h3>
+                <h3>Bonus 4</h3>
                 <p><strong>Exercices de maîtrise vocale</strong> — TOUTES les techniques professionnelles pour développer ta voix</p>
             </div>
         </div>
@@ -1136,40 +1130,40 @@
 
     <!-- What You Get -->
     <section class="section what-you-get" id="accompagnement">
-        <h2 class="section-title">📚 Ce que tu reçois — accompagnement complet</h2>
+        <h2 class="section-title">Ce que tu reçois — accompagnement complet</h2>
 
-        <h3 style="color: var(--purple); font-size: 2rem; margin: 3rem 0 2rem; text-align: center;">📖 Contenus transformateurs</h3>
+        <h3 style="color: var(--purple); font-size: 2rem; margin: 3rem 0 2rem; text-align: center;">Contenus transformateurs</h3>
         <div class="content-grid">
             <div class="content-item">
-                <div class="content-icon">📹</div>
+                <div class="content-icon">12h</div>
                 <div class="content-text">
                     <h4>12h46 de formation vidéo</h4>
                     <p>Formation complète + PDF pour réviser à ton rythme</p>
                 </div>
             </div>
             <div class="content-item">
-                <div class="content-icon">🧘‍♀️</div>
+                <div class="content-icon">8</div>
                 <div class="content-text">
                     <h4>8 méditations guidées</h4>
                     <p>Pour approfondir ton parcours</p>
                 </div>
             </div>
             <div class="content-item">
-                <div class="content-icon">💪</div>
+                <div class="content-icon">82</div>
                 <div class="content-text">
                     <h4>82 exercices pratiques</h4>
                     <p>Pour ancrer tes apprentissages</p>
                 </div>
             </div>
             <div class="content-item">
-                <div class="content-icon">✅</div>
+                <div class="content-icon">✓</div>
                 <div class="content-text">
                     <h4>Quiz d'auto-évaluation</h4>
                     <p>Pour chaque chapitre</p>
                 </div>
             </div>
             <div class="content-item">
-                <div class="content-icon">♾️</div>
+                <div class="content-icon">∞</div>
                 <div class="content-text">
                     <h4>Accès à vie</h4>
                     <p>À tout le contenu + mises à jour</p>
@@ -1178,17 +1172,17 @@
         </div>
 
         <div class="accompaniment">
-            <h3>👤 Accompagnement personnalisé</h3>
+            <h3>Accompagnement personnalisé</h3>
             <div class="accompaniment-grid">
                 <div class="content-item">
-                    <div class="content-icon">🎯</div>
+                    <div class="content-icon">1:1</div>
                     <div class="content-text">
                         <h4>1 séance individuelle (1h30)</h4>
                         <p>Pour poser ton socle de transformation et personnaliser ton parcours</p>
                     </div>
                 </div>
                 <div class="content-item">
-                    <div class="content-icon">📱</div>
+                    <div class="content-icon">3M</div>
                     <div class="content-text">
                         <h4>Accompagnement WhatsApp 3 mois</h4>
                         <p>Pose tes questions, partage tes avancées, enregistre tes pratiques. Je te réponds sous 24h avec des retours personnalisés.</p>
@@ -1198,38 +1192,38 @@
         </div>
 
         <div style="background: linear-gradient(135deg, rgba(212, 175, 55, 0.2) 0%, rgba(184, 197, 160, 0.2) 100%); padding: 2.5rem; border-radius: 20px; margin-top: 3rem; text-align: center;">
-            <h3 style="color: var(--purple); font-size: 1.8rem; margin-bottom: 1rem;">💎 Évolution possible</h3>
-            <p style="font-size: 1.15rem; line-height: 1.8;">⭐ Possibilité de déduire les 997€ intégralement si tu poursuis avec la formation complète — <strong>Voix Conscience devient ton investissement vers la certification</strong></p>
+            <h3 style="color: var(--purple); font-size: 1.8rem; margin-bottom: 1rem;">Évolution possible</h3>
+            <p style="font-size: 1.15rem; line-height: 1.8;">Possibilité de déduire les 997€ intégralement si tu poursuis avec la formation complète — <strong>Voix Conscience devient ton investissement vers la certification</strong></p>
         </div>
     </section>
 
     <!-- Testimonials -->
     <section class="section testimonials">
-        <h2 class="section-title">💫 Ce que vivent mes accompagné·es</h2>
+        <h2 class="section-title">Ce que vivent mes accompagné·es</h2>
         <div class="testimonial-grid">
             <div class="testimonial-card">
                 <div class="testimonial-text">"Tu nous rends notre puissance."</div>
-                <div class="testimonial-author">🌟 Aliénor</div>
+                <div class="testimonial-author">Aliénor</div>
                 <div class="testimonial-role">Voix Conscience</div>
             </div>
             <div class="testimonial-card">
                 <div class="testimonial-text">"J'ai découvert des parties de moi que je n'aurais même pas imaginées !"</div>
-                <div class="testimonial-author">🌈 Gaston</div>
+                <div class="testimonial-author">Gaston</div>
                 <div class="testimonial-role">Voix Conscience</div>
             </div>
             <div class="testimonial-card">
                 <div class="testimonial-text">"Tu as le pouvoir d'écouter et d'aider à découvrir notre beauté intérieure là où on croyait seulement avoir des fragilités. Je suis dans le développement personnel depuis plus de 10 ans et je n'ai jamais rencontré mes émotions autant qu'avec le chant de ta voix qui vibre exactement à la bonne fréquence pour libérer la peur et la douleur… gratitude"</div>
-                <div class="testimonial-author">💎 Rime Jebali</div>
+                <div class="testimonial-author">Rime Jebali</div>
                 <div class="testimonial-role">Voix Conscience</div>
             </div>
             <div class="testimonial-card">
                 <div class="testimonial-text">"C'est un chemin alchimique qui m'a permis d'aller au cœur du cœur de mon essence, à travers la Voix. Ça a posé quelque chose en moi."</div>
-                <div class="testimonial-author">🔥 Valérie</div>
+                <div class="testimonial-author">Valérie</div>
                 <div class="testimonial-role">Formation complète</div>
             </div>
             <div class="testimonial-card">
                 <div class="testimonial-text">"Tu es une sage-femme pour moi. Tu nous fais accoucher de nous-mêmes. Je n'ai plus peur d'être qui je suis."</div>
-                <div class="testimonial-author">🌟 Catherine</div>
+                <div class="testimonial-author">Catherine</div>
                 <div class="testimonial-role">Formation complète</div>
             </div>
         </div>
@@ -1237,11 +1231,11 @@
 
     <!-- Transformations -->
     <section class="section transformations">
-        <h2 class="section-title">🎯 Les transformations concrètes</h2>
+        <h2 class="section-title">Les transformations concrètes</h2>
         <p style="text-align: center; font-size: 1.15rem; margin-bottom: 3rem; color: #666;">Voici ce que mes accompagné·es vivent grâce à Voix Conscience :</p>
 
         <div class="transformation-category">
-            <h3>Transformation émotionnelle :</h3>
+            <h3>Transformation émotionnelle</h3>
             <ul>
                 <li>Libération des peurs, colères, tristesses anciennes</li>
                 <li>Confiance, légitimité, ancrage profond</li>
@@ -1250,7 +1244,7 @@
         </div>
 
         <div class="transformation-category">
-            <h3>Évolution relationnelle :</h3>
+            <h3>Évolution relationnelle</h3>
             <ul>
                 <li>Parole vraie et relations apaisées</li>
                 <li>Capacité à poser tes limites avec bienveillance</li>
@@ -1259,7 +1253,7 @@
         </div>
 
         <div class="transformation-category">
-            <h3>Bien-être global :</h3>
+            <h3>Bien-être global</h3>
             <ul>
                 <li>Sérénité (système nerveux régulé)</li>
                 <li>Connexion spirituelle renforcée</li>
@@ -1272,37 +1266,37 @@
 
     <!-- Pricing -->
     <section class="section pricing" id="tarif">
-        <h2 class="section-title">💎 Valeur exceptionnelle</h2>
+        <h2 class="section-title">Valeur exceptionnelle</h2>
 
         <div class="price-box">
             <h3 style="color: var(--purple); font-size: 1.8rem; margin-bottom: 2rem;">Ce que tu reçois :</h3>
             <div class="value-list">
                 <div class="value-item">
-                    <span>📹 12h46 de formation vidéo</span>
+                    <span>12h46 de formation vidéo</span>
                     <span class="value-amount">1000€</span>
                 </div>
                 <div class="value-item">
-                    <span>📝 Cours PDF complets</span>
+                    <span>Cours PDF complets</span>
                     <span class="value-amount">200€</span>
                 </div>
                 <div class="value-item">
-                    <span>🧘‍♀️ 8 méditations guidées</span>
+                    <span>8 méditations guidées</span>
                     <span class="value-amount">200€</span>
                 </div>
                 <div class="value-item">
-                    <span>💪 82 exercices pratiques</span>
+                    <span>82 exercices pratiques</span>
                     <span class="value-amount">450€</span>
                 </div>
                 <div class="value-item">
-                    <span>🎵 Bonus techniques complets</span>
+                    <span>Bonus techniques complets</span>
                     <span class="value-amount">800€</span>
                 </div>
                 <div class="value-item">
-                    <span>👤 1 séance individuelle</span>
+                    <span>1 séance individuelle</span>
                     <span class="value-amount">150€</span>
                 </div>
                 <div class="value-item">
-                    <span>📱 Support WhatsApp 3 mois</span>
+                    <span>Support WhatsApp 3 mois</span>
                     <span class="value-amount">600€</span>
                 </div>
                 <div class="value-item">
@@ -1324,47 +1318,47 @@
 
     <!-- FAQ -->
     <section class="section faq">
-        <h2 class="section-title">❓ Questions fréquentes</h2>
+        <h2 class="section-title">Questions fréquentes</h2>
 
         <div class="faq-item">
-            <div class="faq-question">🕐 Combien de temps ai-je accès au contenu ?</div>
+            <div class="faq-question">Combien de temps ai-je accès au contenu ?</div>
             <div class="faq-answer">À vie ! Une fois inscrit·e, tu pourras faire et/ou refaire tous les modules sans limite.</div>
         </div>
 
         <div class="faq-item">
-            <div class="faq-question">📱 Comment fonctionne l'accompagnement WhatsApp ?</div>
+            <div class="faq-question">Comment fonctionne l'accompagnement WhatsApp ?</div>
             <div class="faq-answer">Tu peux poser tes questions, partager tes ressentis, enregistrer tes pratiques. Je te réponds personnellement sous 24h avec des retours détaillés (jours ouvrés).</div>
         </div>
 
         <div class="faq-item">
-            <div class="faq-question">🎤 Dois-je savoir chanter pour commencer ?</div>
+            <div class="faq-question">Dois-je savoir chanter pour commencer ?</div>
             <div class="faq-answer">Absolument pas ! C'est un parcours de découverte, pas de performance.</div>
         </div>
 
         <div class="faq-item">
-            <div class="faq-question">⏰ Combien de temps par semaine dois-je y consacrer ?</div>
+            <div class="faq-question">Combien de temps par semaine dois-je y consacrer ?</div>
             <div class="faq-answer">À ton rythme ! Certain·es y consacrent 30min/semaine, d'autres 2h. L'important est la régularité, pas l'intensité.</div>
         </div>
 
         <div class="faq-item">
-            <div class="faq-question">💰 Puis-je vraiment déduire les 997€ de la formation complète ?</div>
+            <div class="faq-question">Puis-je vraiment déduire les 997€ de la formation complète ?</div>
             <div class="faq-answer">Oui, intégralement ! Voix Conscience devient alors ton investissement vers la certification.</div>
         </div>
 
         <div class="faq-item">
-            <div class="faq-question">🎯 Et si ça ne me convient pas ?</div>
+            <div class="faq-question">Et si ça ne me convient pas ?</div>
             <div class="faq-answer">Nous échangeons ensemble pour comprendre et ajuster. Mon objectif est ta transformation réussie, dans le respect de ton rythme.</div>
         </div>
 
         <div class="faq-item">
-            <div class="faq-question">➕ Et si j'ai peur de ne pas réussir ?</div>
+            <div class="faq-question">Et si j'ai peur de ne pas réussir ?</div>
             <div class="faq-answer">C'est naturel d'avoir peur devant la transformation… tu avances à ton rythme, je suis présente pour toi, où que tu sois.</div>
         </div>
     </section>
 
     <!-- Why Now -->
     <section class="section why-now">
-        <h2 class="section-title">🔥 Pourquoi maintenant ?</h2>
+        <h2 class="section-title">Pourquoi maintenant ?</h2>
         <div style="max-width: 800px; margin: 0 auto;">
             <p><strong>Ta voix t'attend depuis toujours.</strong></p>
             <p>Chaque jour où tu ne l'explores pas, c'est une partie de toi qui reste silencieuse.</p>
@@ -1377,7 +1371,7 @@
     <!-- Personal Message -->
     <section class="personal-message">
         <div class="message-content">
-            <h2>💖 Un mot personnel</h2>
+            <h2>Un mot personnel</h2>
             <div class="message-photo">
                 <img src="photo3.jpg" alt="Magali Leone">
             </div>
@@ -1389,13 +1383,13 @@
                 <p>C'est un espace doux, profond, respectueux, où tu peux enfin accoucher de qui tu es vraiment.</p>
                 <p><strong>Ta transformation t'attend. Ta voix t'appelle.</strong></p>
             </div>
-            <p class="signature">Avec tout mon amour,<br>💫 Magali</p>
+            <p class="signature">Avec tout mon amour,<br>Magali</p>
         </div>
     </section>
 
     <!-- Final CTA -->
     <section class="final-cta">
-        <h2>🚀 Prête à découvrir ta voix intérieure ?</h2>
+        <h2>Prête à découvrir ta voix intérieure ?</h2>
         <p style="font-size: 1.3rem; margin-bottom: 2rem;">Ta voix vers toi commence maintenant.</p>
         <a href="https://calendly.com/contact-magalileone/appel-retour-a-soi" class="cta-button" target="_blank">Réserver mon appel découverte offert</a>
         <p class="cta-micro">Accès immédiat • 100% à ton rythme • Séance incluse</p>
@@ -1404,7 +1398,7 @@
     <!-- Footer -->
     <footer>
         <p>Des questions ? Écris-moi à <a href="mailto:contact.magalileone@gmail.com">contact.magalileone@gmail.com</a></p>
-        <p style="margin-top: 1rem;">Je te réponds personnellement 💌</p>
+        <p style="margin-top: 1rem;">Je te réponds personnellement</p>
         <p style="margin-top: 2rem; font-size: 0.9rem; opacity: 0.8;">© 2025 Magali Leone - La Voix Vers Soi</p>
     </footer>
 
